@@ -29,7 +29,7 @@ class CollectionController extends Controller
         }
         $collection = Collection::with('tasks')->find($id);
         $this->authorize('view', $collection);
-
+ 
         return response()->json($collection);
     }
 
